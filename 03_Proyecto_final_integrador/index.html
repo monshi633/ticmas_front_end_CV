@@ -8,20 +8,18 @@
   <link href="styles.css" rel="stylesheet" /> <!--TO DO: maybe use Bootstrap-->
   <link href="images/favicon.png" rel="shortcut icon" type="image/png"> <!--TO DO: maximize contrast on design-->
   <title>Curriculum Vitae de Simón</title>
-
+  
   <!--External references-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Poppins:wght@200;400;600;800&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Poppins:wght@200;400;600;800&display=swap">
   <script src="https://kit.fontawesome.com/56435b6968.js" crossorigin="anonymous"></script>
-
+  
   <!--SEO-->
   <meta name="description" content="Curriculum Vitae" />
   <meta name="keywords" content="curriculum, vitae, cv, resume, programmer, coding">
   <meta name="author" content="Simón">
-
+  
   <!--Open Graph Metadata-->
   <meta property="og:title" content="Curriculum Vitae de Simón" />
   <meta property="og:type" content="text" />
@@ -32,18 +30,20 @@
 <body>
   <div class="container">
     <header>
-      <div class="hexagon">
-        <img src="images/profile.jpg" alt="profile picture">
-        <div class="triangulo tl"></div>
-        <div class="triangulo tr"></div>
-        <div class="triangulo bl"></div>
-        <div class="triangulo br"></div>
-        <div class="baston"></div>
-        <div class="baston derecha"></div>
-      </div>
-      <div class="titulo">
-        <h1>Juan Simón</h1>
-        <h2>Desarrollador</h2>
+      <!--TO DO: Replace all this shit with a simple image -->
+      <div class="encabezado">
+        <div class="hexagon">
+          <img src="images/profile.jpg" alt="profile picture">
+          <div class="triangulo tl"></div>
+          <div class="triangulo tr"></div>
+          <div class="triangulo bl"></div>
+          <div class="triangulo br"></div>
+          <div class="baston"></div>
+          <div class="baston derecha"></div>
+        </div>
+        <!-- <img class="prof" src="images/profile.png" alt="profile picture"> -->
+        <h1>Juan Simón<br>Bournissen</h1>
+        <h2>Arquitecto</h2>
         <ul class="contact">
           <li><a target="_blank" href="mailto:arqbournissen@gmail.com"><i class="fa-solid fa-envelope"></i></a></li> <!--TO DO: Fix mail to-->
           <li><a target="_blank" href="https://www.linkedin.com/in/simon-bournissen/"><i class="fa-brands fa-linkedin"></i></a></li>
@@ -52,18 +52,100 @@
       </div>
       <nav>
         <ul class="navbar">
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a href="#tools">Tools</a></li>
+          <li class="nav-item"><a class="item" id="section1" href="#about"><i class="fa-solid fa-user"></i></a></li>
+          <li class="nav-item"><a class="item" id="section2" href="#resume"><i class="fa-solid fa-book-open"></i></a></li>
+          <li class="nav-item"><a class="item" id="section3" href="#portfolio"><i class="fa-solid fa-briefcase"></i></a></li>
+          <li class="nav-item"><a class="item" id="section4" href="#tools"><i class="fa-solid fa-toolbox"></i></a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="card" id="about"></div>
-      <div class="card" id="portfolio"></div>
-      <div class="card" id="tools"></div>
+      <div class="card" id="about">
+        <div class="grid">
+          <h2>SOBRE MÍ</h2>
+          <p>Tengo <span>32</span> años. Soy emprendedor, con actitud, iniciativa y experiencia en relaciones humanas y trabajo en equipo. Como Scout por más de 10 años, desarrollé valores y herramientas útiles para la comunicación y gestión de diversos escenarios.</p>
+          <ul>
+            <li><span>Nacimiento:</span> 12/06/1990</li>
+            <li><span>Residencia:</span> Argentina</li>
+            <li><span>Licencia de conducir:</span> B2</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="resume">
+        <div class="grid">
+          <h2>ESTUDIOS</h2>
+          <div class="paragraph">
+            <h3>2007</h3>
+            <p>Bachillerato en Economía y Gestión de las Organizaciones</p>
+          </div>
+          <div class="paragraph">
+            <h3>2008-2017</h3>
+            <p>Facultad de Arquitectura y Urbanismo, UNLP</p>
+          </div>
+          <div class="paragraph">
+            <h3>2020 en adelante</h3>
+            <p>Diversos cursos introductorios en lenguajes de programación</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="portfolio">
+        <div class="grid">
+          <h2>EXPERIENCIA LABORAL</h2>
+          <div class="paragraph">
+            <h3>2014-2018</h3>
+            <p>Dibujo CAD y renders.</p>
+          </div>
+          <div class="paragraph">
+            <h3>2016</h3>
+            <p>Orden de mérito en concurso para cargo de EMATP en Construcciones Civiles, Escuela de Educación Técnica Nº8.</p>
+          </div>
+          <div class="paragraph">
+            <h3>2017 - actualidad</h3>
+            <p>Socio y artesano en estudio de carpintería.</p>
+          </div>
+          <div class="paragraph">
+            <h3>2018</h3>
+            <p>Colaboración y consultoría en proyecto multi-disciplinar biogas (Arquitectura, Ciencias Naturales, Veterinaria, Ingeniería. UNLP).</p>
+          </div>
+          <div class="paragraph">
+            <h3>2020 - actualidad</h3>
+            <p>Dibujo y asistencia en diseño. Estudio AH Arquitectura.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="tools">
+        <div class="grid">
+          <h2>HERRAMIENTAS</h2>
+          <ul>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>AutoCAD</li>
+            <li>Sketchup</li>
+            <li>Paquete Office</li>
+          </ul>
+          <h2>IDIOMAS</h2>
+          <ul>
+            <li>Español - nativo</li>
+            <li>Inglés - avanzado</li>
+            <li>Alemán - inicial</li>
+          </ul>
+          <h2>HABILIDADES</h2>
+          <ul>
+            <li>Predisposición</li>
+            <li>Proactividad</li>
+            <li>Liderazgo</li>
+            <li>Creatividad</li>
+            <li>Comunicación</li>
+            <li>Adaptabilidad</li>
+          </ul>
+        </div>
+      </div>
     </main>
   </div>
+  <script src="functions.js"></script>
 </body>
 
 </html>

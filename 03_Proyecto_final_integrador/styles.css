@@ -1,11 +1,12 @@
 /*Initial setup*/
 :root {
-    /* TO DO: Assign better names to variables */
-    --color-1: grey;
-    --color-2: lightblue;
-    --color-3: white;
-    --color-4: darkgrey;
-    --hex-width: 300px;
+    --color-background1: #8D7C86;
+    --color-background2: #433A3F;
+    --color-text: #F5F3F7;
+    --color-accent1: #DA3E52;
+    --color-accent2: #DD6B55;
+
+    --hex-width: 200px;
     --tri-width: calc(var(--hex-width) / 2);
     --tri-height: calc(var(--tri-width) / 2);
 }
@@ -17,57 +18,70 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-  }
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
 
 body {
-    background-color: var(--color-1);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    background: linear-gradient(-45deg, var(--color-accent1), var(--color-accent2));
+    color: var(--color-text);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
+h2, h3, span {
     font-weight: 400;
 }
 
-a, a:hover {
-    color: black;
+a {
+    color: var(--color-text);
+}
+
+#section1, a:hover, h3, span {
+    color: var(--color-accent2);
 }
 
 /*Header*/
 .container {
     display: flex;
     flex-direction: row;
-    background-color: var(--color-2);
+    background-color: var(--color-background1);
     width: 70vw;
     height: 80vh;
     margin: 10vh auto;
-    border-radius: 3vw;
+    border-radius: 1.5vw;
 }
 
 header {
-    background-color: var(--color-2);
+    background-color: var(--color-background1);
     height: 100%;
-    width: 30%;
-    border-radius: 3vw 0 0 3vw;
+    width: 25%;
+    border-radius: 1.5vw 0 0 1.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /*Profile picture*/
+.prof {
+    width: 60%;
+    height: auto;
+    margin-top: 3vh;
+}
+
 .hexagon {
     position: relative;
     width: var(--hex-width);
     height: var(--hex-width);
-    margin: 30px auto 20px;
+    margin: 3vw auto 1.5vw;
 }
 
 .triangulo {
@@ -81,14 +95,14 @@ header {
     top: 0;
     left: 0;
     border-right: var(--tri-width) solid transparent;
-    border-top: var(--tri-height) solid var(--color-2);
+    border-top: var(--tri-height) solid var(--color-background1);
 }
 
 .tr {
     top: 0;
     right: 0;
     border-left: var(--tri-width) solid transparent;
-    border-top: var(--tri-height) solid var(--color-2);
+    border-top: var(--tri-height) solid var(--color-background1);
 }
 
 img {
@@ -101,21 +115,21 @@ img {
     bottom: 0;
     left: 0;
     border-right: var(--tri-width) solid transparent;
-    border-bottom: var(--tri-height) solid var(--color-2);
+    border-bottom: var(--tri-height) solid var(--color-background1);
 }
 
 .br {
     bottom: 0;
     right: 0;
     border-left: var(--tri-width) solid transparent;
-    border-bottom: var(--tri-height) solid var(--color-2);
+    border-bottom: var(--tri-height) solid var(--color-background1);
 }
 
 .baston {
     height: 100%;
     width: 6%;
     position: absolute;
-    background-color: var(--color-2);
+    background-color: var(--color-background1);
     top: 0;
 }
 
@@ -124,7 +138,7 @@ img {
 }
 /* End of profile picture */
 
-.titulo {
+.encabezado {
     text-align: center;
 }
 
@@ -134,17 +148,18 @@ img {
     justify-content: center;
     gap: 20px;
     font-size: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 nav {
-    background-color: var(--color-4);
-    height: 10%;
+    background-color: var(--color-background2);
+    height: 7%;
     width: 80%;
-    border-radius: 3vw;
+    border-radius: 1.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2vw;
 }
 
 .navbar {
@@ -155,22 +170,76 @@ nav {
 }
 
 .nav-item a{
-    font-size: 1.1rem;
-    color: var(--color-3);
+    font-size: 1.5rem;
 }
 /* End of header */
 
+
+/* Main */
 main {
-    background-color: var(--color-3);
     height: 100%;
-    width: 70%;
-    border-radius: 3vw;
+    width: 75%;
+    border-radius: 1.5vw;
 }
 
 .card {
-    background-color: var(--color-3);
+    background-color: var(--color-background2);
     height: 100%;
     width: 90%;
-    border-radius: 3vw 0 0 3vw;
+    border-radius: 1.5vw;
+    padding: 3vw;
+    display: none;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 1rem 3rem;
+}
+
+.grid h2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.paragraph, .grid ul {
+    display: block;
+    margin: 10px;
+    grid-column: 2 / 2;
+}
+
+/* About section */
+#about {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Resume section */
+#resume {
+    width: 100%;
+    height: 100%;
+}
+
+/* Portfolio section */
+#portfolio {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tools section */
+#tools {
+    width: 100%;
+    height: 100%;
+}
+
+#tools h2:nth-of-type(2) {
+    grid-row: 2 / 3;
+}
+
+#tools h2:nth-of-type(3) {
+    grid-row: 3 / 4;
+}
+
+/* TO DO: Media queries: phone portrait, tablet and pc */
