@@ -2,36 +2,41 @@
 <html lang="es">
 
 <head>
-  <!--Basics-->
+  <!-- Basics -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="styles.css" rel="stylesheet" /> <!--TO DO: maybe use Bootstrap-->
-  <link href="images/favicon.png" rel="shortcut icon" type="image/png"> <!--TO DO: maximize contrast on design-->
+  <!--TO DO: maybe use Bootstrap-->
+  <link href="styles.css" rel="stylesheet" />
+  <!--TO DO: maximize contrast on design-->
+  <link href="images/favicon.png" rel="shortcut icon" type="image/png">
   <title>Curriculum Vitae de Simón</title>
   
-  <!--External references-->
+  <!-- External references -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Poppins:wght@200;400;600;800&display=swap">
   <script src="https://kit.fontawesome.com/56435b6968.js" crossorigin="anonymous"></script>
   
-  <!--SEO-->
+  <!-- SEO -->
   <meta name="description" content="Curriculum Vitae" />
   <meta name="keywords" content="curriculum, vitae, cv, resume, programmer, coding">
   <meta name="author" content="Simón">
   
-  <!--Open Graph Metadata-->
+  <!-- Open Graph Metadata -->
   <meta property="og:title" content="Curriculum Vitae de Simón" />
   <meta property="og:type" content="text" />
-  <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" /> <!--TO DO: replace content with github url-->
+  <!--TO DO: replace content with github url-->
+  <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
   <meta property="og:image" content="images/profile.jpg" />
 </head>
 
 <body>
   <div class="container">
     <header>
-      <!--TO DO: Replace all this shit with a simple image -->
-      <div class="encabezado">
+      <heading>
+        <!-- exists only to tie picture and name together -->
+        <!--TO DO: Replace all this shit with a simple image? -->
+        <!-- <img class="prof" src="images/profile.png" alt="profile picture"> -->
         <div class="hexagon">
           <img src="images/profile.jpg" alt="profile picture">
           <div class="triangulo tl"></div>
@@ -41,15 +46,17 @@
           <div class="baston"></div>
           <div class="baston derecha"></div>
         </div>
-        <!-- <img class="prof" src="images/profile.png" alt="profile picture"> -->
+        <div>
         <h1>Juan Simón<br>Bournissen</h1>
-        <h2>Arquitecto</h2>
-        <ul class="contact">
-          <li><a target="_blank" href="mailto:arqbournissen@gmail.com"><i class="fa-solid fa-envelope"></i></a></li> <!--TO DO: Fix mail to-->
-          <li><a target="_blank" href="https://www.linkedin.com/in/simon-bournissen/"><i class="fa-brands fa-linkedin"></i></a></li>
-          <li><a target="_blank" href="https://github.com/monshi633"><i class="fa-brands fa-github"></i></a></li>
-        </ul>
-      </div>
+          <h2>Arquitecto</h2>
+          <ul class="contact">
+            <!--TO DO: Fix mail to, it doesn't take me to write an email-->
+            <li><a target="_blank" href="mailto:arqbournissen@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/simon-bournissen/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a target="_blank" href="https://github.com/monshi633"><i class="fa-brands fa-github"></i></a></li>
+          </ul>
+        </div>
+      </heading>
       <nav>
         <ul class="navbar">
           <li class="nav-item"><a class="item" id="section1" href="#about"><i class="fa-solid fa-user"></i></a></li>
@@ -60,6 +67,7 @@
       </nav>
     </header>
     <main>
+      <!-- TO DO: Add more detail and style elements -->
       <div class="card" id="about">
         <div class="grid">
           <h2>SOBRE MÍ</h2>
