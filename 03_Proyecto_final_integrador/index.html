@@ -61,8 +61,7 @@
         <ul class="navbar">
           <li class="nav-item"><a class="item" id="section1" href="#about"><i class="fa-solid fa-user"></i></a></li>
           <li class="nav-item"><a class="item" id="section2" href="#resume"><i class="fa-solid fa-book-open"></i></a></li>
-          <li class="nav-item"><a class="item" id="section3" href="#portfolio"><i class="fa-solid fa-briefcase"></i></a></li>
-          <li class="nav-item"><a class="item" id="section4" href="#tools"><i class="fa-solid fa-toolbox"></i></a></li>
+          <li class="nav-item"><a class="item" id="section3" href="#tools"><i class="fa-solid fa-briefcase"></i></a></li>
         </ul>
       </nav>
     </header>
@@ -71,12 +70,17 @@
       <div class="card" id="about">
         <div class="grid">
           <h2>SOBRE MÍ</h2>
-          <p>Tengo <span>32</span> años. Soy emprendedor, con actitud, iniciativa y experiencia en relaciones humanas y trabajo en equipo. Como Scout por más de 10 años, desarrollé valores y herramientas útiles para la comunicación y gestión de diversos escenarios.</p>
-          <ul>
-            <li><span>Nacimiento:</span> 12/06/1990</li>
+          <p class="intro">Tengo <span id="age"></span> años. Soy emprendedor, con actitud, iniciativa y experiencia en relaciones humanas y trabajo en equipo. Como Scout por más de 10 años, desarrollé valores y herramientas útiles para la comunicación y gestión de diversos escenarios.</p>
+          <ul class="stats">
+            <li><span>Nacimiento:</span> <p id="birthdate">1990/06/12</p></li>
             <li><span>Residencia:</span> Argentina</li>
-            <li><span>Licencia de conducir:</span> B2</li>
+            <li><span>Carnet de conducir:</span> B2</li>
           </ul>
+          <h3>Mis intereses</h3>
+          <div class="paragraph col1">
+            <i class="fa-solid fa-landmark"></i>
+            <p>Tu vieja</p>
+          </div>
         </div>
       </div>
 
@@ -95,11 +99,8 @@
             <h3>2020 en adelante</h3>
             <p>Diversos cursos introductorios en lenguajes de programación</p>
           </div>
-        </div>
-      </div>
-
-      <div class="card" id="portfolio">
-        <div class="grid">
+          <div class="paragraph"></div>
+          <div class="paragraph"></div>
           <h2>EXPERIENCIA LABORAL</h2>
           <div class="paragraph">
             <h3>2014-2018</h3>
@@ -127,20 +128,25 @@
       <div class="card" id="tools">
         <div class="grid">
           <h2>HERRAMIENTAS</h2>
+          <div class="paragraph"></div>
           <ul>
             <li>Adobe Illustrator</li>
             <li>Adobe Photoshop</li>
             <li>AutoCAD</li>
             <li>Sketchup</li>
-            <li>Paquete Office</li>
+            <li>Word</li>
+            <li>Excel</li>
+            <li>Power-Point</li>
           </ul>
           <h2>IDIOMAS</h2>
+          <div class="paragraph"></div>
           <ul>
             <li>Español - nativo</li>
             <li>Inglés - avanzado</li>
             <li>Alemán - inicial</li>
           </ul>
           <h2>HABILIDADES</h2>
+          <div class="paragraph"></div>
           <ul>
             <li>Predisposición</li>
             <li>Proactividad</li>
@@ -157,3 +163,11 @@
 </body>
 
 </html>
+
+<!-- TO DO: Check in every file for:
+wrong nametags/language cohesion,
+spelling errors,
+innecesary code,
+ways to simplify,
+formatting,
+and finally, test -->
