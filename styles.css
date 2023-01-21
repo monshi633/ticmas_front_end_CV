@@ -40,12 +40,12 @@ h1 {
     font-size: var(--font-main);
 }
 
-h2, h3, span {
-    font-weight: 400;
-}
-
 h2, h3 {
     font-size: var(--font-second);
+}
+
+h2, h3, span {
+    font-weight: 400;
 }
 
 p, li, span {
@@ -63,6 +63,7 @@ ul {
 #section1, a:hover, i:hover, h3, span {
     color: var(--color-accent2);
 }
+
 
 /* Header */
 .container {
@@ -95,7 +96,7 @@ header {
     margin: 4vw auto 1.5vw;
 }
 
-.triangulo {
+.triangle {
     position: absolute;
     width: 50%;
     height: 25%;
@@ -331,6 +332,7 @@ main {
     padding-right: 3vw;
     border-right: 2px dotted var(--color-accent2);
 }
+
 
 /* Media queries */
 @media (max-width: 1440px), screen and (max-height: 880px) {
