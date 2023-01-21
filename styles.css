@@ -160,7 +160,7 @@ img {
 nav {
     background-color: var(--color-background2);
     height: 7%;
-    width: 80%;
+    width: 60%;
     border-radius: 1.5vw;
     display: flex;
     align-items: center;
@@ -196,6 +196,7 @@ main {
     padding: 3vw;
     display: none;
     overflow: auto;
+    animation: fadeIn 1s;
 }
 
 .grid {
@@ -333,6 +334,11 @@ main {
     border-right: 2px dotted var(--color-accent2);
 }
 
+/* Keyframes */
+@keyframes fadeIn {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
 
 /* Media queries */
 @media (max-width: 1440px), screen and (max-height: 880px) {
