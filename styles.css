@@ -3,8 +3,10 @@
     --color-background1: #8D7C86;
     --color-background2: #433A3F;
     --color-text: #F5F3F7;
-    --color-accent1: #DA3E52;
-    --color-accent2: #DD6B55;
+    /* --color-accent1: #DA3E52; */
+    --color-accent1: #daa33e;
+    /* --color-accent2: #DD6B55; */
+    --color-accent2: #DA3E52;
 
     --hex-width: 200px;
     --tri-width: calc(var(--hex-width) / 2);
@@ -24,6 +26,9 @@
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
+    letter-spacing: 0.05em;
+    word-spacing: -0.05em;
+    line-height: 1.3em;
 }
 
 body {
@@ -60,7 +65,7 @@ ul {
     display: block;
 }
 
-#section1, a:hover, i:hover, h3, span {
+#section1, a:hover, header i:hover, h3, span {
     color: var(--color-accent2);
 }
 
@@ -220,16 +225,19 @@ main {
 }
 
 #about .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .intro {
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
 }
 
 .stats {
-    grid-column: 3;
-    align-self: center;
+    grid-column: 1 / 4;
+}
+
+.stats li {
+    line-height: 2em;
 }
 
 #birthdate {
@@ -237,31 +245,21 @@ main {
 }
 
 #about h3 {
-    grid-column: 1/4;
-    margin-top: 5%;
+    grid-row: 1;
+    grid-column: 4;
 }
 
-#about .col1{
-    grid-column: 1;
+.sidebar {
+    grid-column: 4;
+    grid-row: 2 / 4;
 }
 
-#about .col2{
-    grid-column: 2;
+.sidebar i {
+    font-size: var(--font-second);
 }
 
-#about .col3{
-    grid-column: 3;
-}
-
-#about .paragraph {
-    margin: 5%;
-}
-
-#about .paragraph i {
-    font-size: var(--font-main);
-}
-
-#about .paragraph p {
+.sidebar p {
+    margin-bottom: 10%;
     font-weight: 400;
 }
 
@@ -303,6 +301,10 @@ main {
     grid-row: 5;
 }
 
+#resume i {
+    font-size: calc(var(--font-third) * 0.85);
+}
+
 /* Tools section */
 #tools {
     width: 100%;
@@ -323,6 +325,10 @@ main {
 
 #tools h2:nth-of-type(3) {
     grid-row: 5;
+}
+
+#tools h2:nth-of-type(4) {
+    grid-row: 7;
 }
 
 #tools ul {
@@ -365,8 +371,26 @@ main {
 }
 
 @media (max-width: 1024px) {
-    .intro, .stats {
-        grid-column: 1/4;
+    .intro {
+        grid-column: 1 / 5;
+    }
+
+    .stats {
+        grid-column: 1 / 5;
+        grid-row: 3
+    }
+
+    #about h3 {
+        grid-column: 1 / 5;
+        grid-row: 4;
+    }
+
+    .sidebar {
+        grid-column: 1 / 5;
+        grid-row: 5;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 5%;
     }
 }
 
