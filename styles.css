@@ -154,6 +154,10 @@ img {
 }
 /** End of profile picture **/
 
+.name {
+	margin-bottom: 10%;
+}
+
 .contact {
 	display: flex;
 	flex-direction: row;
@@ -426,16 +430,25 @@ main {
 		flex-direction: row;
 		align-items: center;
 		gap: 4%;
-		width: 80%;
+		width: 90%;
 	}
-	
+
+	.removable {
+		display: none;
+	}
+
 	.hexagon {
 		margin: 0;
 	}
 	
+	.name {
+		margin-bottom: 5%;
+	}
+
 	.contact {
 		justify-content: space-evenly;
 		gap: 0;
+		margin-top: 5%;
 	}    
 
 	nav {
